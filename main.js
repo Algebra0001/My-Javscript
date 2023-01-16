@@ -197,22 +197,23 @@ console.log(sumArr([1,2,3]))
 function trackCriminal(locations) {
   let newLoc = [];
   for(let i = 0; i<locations.length; i++){
-    for(let j = 0; j<locations[i].length; j++){
-    if(newLoc.indexOf(locations[i][j]) === -1){
-        newLoc.push(locations[i][j]
-    }
-    }
+      for(let j = 0; j<locations[i].length; j++){
+          if(newLoc.indexOf(locations[i][j]) === -1){
+              newLoc.push(locations[i][j])
+          }
+      }
   }
-    let start = 2;
-    let end = newLoc.length - 1;
-    while(start < end){
-      let temp = newLoc[start];
-    newLoc[start] = newLoc[end];
-    tem = newLoc[end]
-      start++
-      end--
-    }
-    return newLoc.join(" ")
+  let start = 2;
+  let end = newLoc.length - 1
+  while(start < end){
+      let temp = newLoc[start]
+        newLoc[start] = newLoc[end]
+        newLoc[end] = temp;
+        start++;
+        end--
+  }
+  [newLoc[3], newLoc[4]] = [newLoc[4], [newLoc[3]]]
+  return newLoc.join(" ")
 }
 const locations = [  ["USA", "BRA"],
   ["JPN", "PHL"],
