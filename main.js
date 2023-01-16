@@ -195,27 +195,24 @@ console.log(sumArr([1,2,3]))
 // USA BRA UAE JPN PHL
 
 function trackCriminal(locations) {
-  // Create an array to keep track of the criminal's movements
-  const movements = [];
-
-  // Loop through the locations array
-  for (let i = 0; i < locations.length; i++) {
-    // Get the current location and the next location
-    const currentLocation = locations[i][0];
-    const nextLocation = locations[i][1];
-
-    // Push the current location onto the movements array
-    movements.push(currentLocation);
-    console.log(movements)
-    // If the next location is not in the movements array, push it onto the array
-    if (movements.indexOf(nextLocation) === -1) {
-      movements.push(nextLocation);
-      console.log(movements)
+  let newLoc = [];
+  for(let i = 0; i<locations.length; i++){
+    for(let j = 0; j<locations[i].length; j++){
+    if(newLoc.indexOf(locations[i][j]) === -1){
+        newLoc.push(locations[i][j]
+    }
     }
   }
-
-  // Return the movements array as a string
-  return movements.join(" ");
+    let start = 2;
+    let end = newLoc.length - 1;
+    while(start < end){
+      let temp = newLoc[start];
+    newLoc[start] = newLoc[end];
+    tem = newLoc[end]
+      start++
+      end--
+    }
+    return newLoc.join(" ")
 }
 const locations = [  ["USA", "BRA"],
   ["JPN", "PHL"],
