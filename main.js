@@ -1108,3 +1108,20 @@ function paritySum(numbers) {
   //   }
   // }
   // console.log(skipLetters('hello', 2))
+
+
+//Transpose array////
+function transpose(matrix){
+    let arr1 = matrix[0];
+    let arr2 = matrix[1];
+    let result = [];
+    let i = 0;
+    let j = 0;
+    while(i < arr1.length && j < arr2.length){
+        result.push([arr1[i], arr2[j]])
+        i++;
+        j++;
+    }
+    return result
+}
+console.log(transpose([[1,2,3], [4,5,6]]))
