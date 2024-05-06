@@ -875,8 +875,8 @@ function increment(arr, val){
 console.log(increment([{val: 1}, {val: 2}, {val: 3}], 2))
 
 
-// An ATM has 100, 50 and @) Naira bills (NGN) to be dispensed 
-// Given an amount between 40 and 1000 Naira (inclusive) rounded to the ndearest 10 and assuming that the ATM wants to use as few bills as possible.
+// An ATM has 100, 50 and 20 Naira bills (NGN) to be dispensed 
+// Given an amount between 40 and 1000 Naira (inclusive) rounded to the nearest 10 and assuming that the ATM wants to use as few bills as possible.
 // Implement the function withdraw(amount) that returns the minimal number of 100, 50 and 20 Naira bills the ATM needs to dispense (in that order) in an array.
 
 // Example
@@ -1126,7 +1126,7 @@ function transpose(matrix){
 }
 console.log(transpose([[1,2,3], [4,5,6]]))
 
-// A bianry gap within a positive integer N any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
+// A binary gap within a positive integer N any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
 // For example;
 // Number 9 has a binary representation of 1001 and contains a binary gap of length 2. The number 529bhas binary representation of 1000010001 and contains two binary gaps of length 4 and 3. The number 20 has a binary represenation of 10100 has a binary gap of length 1. The number 15 has a representation of 1111 and has no binary gaps. The number 32 has a representation of 100000 and has no binary gaps.
 // Your task: 
